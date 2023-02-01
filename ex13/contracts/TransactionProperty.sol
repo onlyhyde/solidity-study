@@ -15,7 +15,36 @@ contract TransactionProperty {
   uint public msg5 = msg.value;
 
   // msg.value 를 사용하기 위해서는 payable을 선언해야함. 없을시, msg.value 사용하면 에러발생.
-  function checkValue() external payable { 
+  function checkValue() external payable returns(uint){ 
     uint value = msg.value; 
+    return value;
+  }
+
+  // contract을 호출한 사용자와 전송한 eth의 wei 수를 관리하는 방법
+  mapping(address=> uint) private orderList;
+  function newOderList() external payable {
+      orderList[msg.sender] = msg.value;
+      this.newCheckFunction();
+  }
+
+  // 함수식별자 확인 방법 (msg.sig)
+  bytes4 private checkFunction;
+  function newOderList2() external pure returns(bytes4){
+      return msg.sig;
+  }
+
+  function getSelector(string calldata _func) external pure returns (bytes4) {
+      return bytes4(keccak256(bytes(_func)));
+  }
+
+  function newCheckFunction() external pure returns(bool) {
+      bytes4 selector = bytes4(keccak256(abi.encodePacked("newOderList2()")));
+      bool check = false;
+      if (selector == msg.sig) {
+          return true;
+      } else if (msg.sig == 0x1b33b381) { // newCheckFunction() sig
+          check = true;
+      }
+      return check;
   }
 }

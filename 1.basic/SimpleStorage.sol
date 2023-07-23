@@ -1,4 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
+// 참고 : https://spdx.org/licenses/ 
+
 pragma solidity >=0.4.16 <0.9.0;
 
 contract SimpleStorage {

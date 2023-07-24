@@ -20,7 +20,6 @@ contract DataType {
   bytes20 public bytes20Type = hex"dc3bab6b6af0773a1bf2038fdc716dcd0bdbd564"; // 고정 길이를 사용하는 경우. 주소값을 쓸때 주로 사용. 
   bytes32 public bytes32Type = hex"781dae1f3a9b7b8b454b7d140632aa072099623d0bbdeae5b67d387e31ba520d"; // tx hash 값을 쓸때 주로 사용.
 
-  // solidity는 소수점 처리를 할 수 없음. float type 존재하지 않는다. 소수점 처리는 외부에서 해결해야 함. 
-
-  address public addressType = 0xdc3bab6b6af0773a1bf2038fdc716dcd0bdbd564;
+  // solidity는 소수점 처리를 할 수 없음. float type 존재하지 않는다. 소수점 처리는 외부에서 해결해야 함.
+  address public addressType = 0xdC3BaB6B6aF0773a1bf2038fDc716dcD0bDbd564;
 }

@@ -3,26 +3,26 @@ pragma solidity ^0.8.17;
 
 contract FunctionVisibility {
 
-  uint8 private data = 255;
-  uint8 public data = 255;
+  uint8 private privateData = 255;
+  uint8 public publicData = 255;
 
   // 외부 공개 x, 상속된 ca x, 내부에서 o
-  function setData(uint8 newData) private {
-    data = newData;
+  function setDataPrivate(uint8 newData) private {
+    privateData = newData;
   }
 
   // 외부 공개 x, 상속된 ca o, 내부에서 o
-  function setData(uint8 newData) internal {
-    data = newData;
+  function setDataInternal(uint8 newData) internal {
+    privateData = newData;
   }
 
   // 외부 공개 o, 상속된 ca o, 내부에서 o
-  function setData(uint8 newData) public {
-    data = newData;
+  function setDataPublic(uint8 newData) public {
+    privateData = newData;
   }
 
   // 외부 공개 o, 상속된 ca x, 내부에서 x
-  function setData(uint8 newData) external {
-    data = newData;
+  function setDataExternal(uint8 newData) external {
+    privateData = newData;
   }
 }

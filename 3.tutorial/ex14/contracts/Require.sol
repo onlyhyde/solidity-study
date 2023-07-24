@@ -2,7 +2,7 @@
 pragma solidity ^0.8.17;
 
 contract Require{
-  private mapping(address=>uint) orderList;
+  mapping(address=>uint) private orderList;
 
   function order() external payable {
     require(msg.value != 0, "Msg.value must not be zero"); // require("조건", 성립하지 않을때 구문)

@@ -15,14 +15,14 @@ contract PureView {
 
   // Storage : 영구적 저장 
   // memory : 일시적 생성 
-  uint8 storage private sdata = 255;
+  uint8 private sdata = 255; // storage
 
   function getStorageData() public view returns(uint8) { // state값을 조회하는 경우
     return sdata;
   }
 
-  function getMemoryData(string memory _data) public pure returns(uint8 memory) { // state값을 조회 하지 않은 경우
-    uint8 memory tempData = 1;
+  function getMemoryData() public pure returns(uint8) { // state값을 조회 하지 않은 경우
+    uint8 tempData = 1;
     return tempData;
   }
 

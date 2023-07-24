@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.17;
+pragma solidity >=0.8.2 <0.9.0;
+
+// https://sepolia.etherscan.io/address/0x08452236fe895d115939dc6b6eddcda709c456c7#readContract
 
 contract BlockProperty {
-  // https://docs.soliditylang.org/en/v0.8.17/units-and-global-variables.html#block-and-transaction-properties
+  // https://docs.soliditylang.org/en/v0.8.18/units-and-global-variables.html#block-and-transaction-properties
   uint public block1 = block.basefee;
   uint public block2 = block.chainid;
   address public block3 = block.coinbase;

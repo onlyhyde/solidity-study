@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.2 <0.9.0;
 
+// Remix에서 정상동작하지 않아, 테스트넷에 배포하여 확인
 // https://sepolia.etherscan.io/address/0x08452236fe895d115939dc6b6eddcda709c456c7#readContract
 
 contract BlockProperty {

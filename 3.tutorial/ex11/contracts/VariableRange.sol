@@ -9,7 +9,7 @@ contract VariableRange {
     return data;
   }
 
-  function getData2() public view returns(uint) {
+  function getData2() public pure returns(uint) {
     uint data = 5;
     return data; // 5
   }

@@ -9,7 +9,7 @@ contract FunctionV4 {
     data += 1;
   }
 
-  function getData() public returns(uint8) {
+  function getData() public view returns(uint8) {
     return data;
   }
 }

@@ -18,11 +18,11 @@ contract FunctionVisibility {
 
   // 외부 공개 o, 상속된 ca o, 내부에서 o
   function setDataPublic(uint8 newData) public {
-    privateData = newData;
+    publicData = newData;
   }
 
   // 외부 공개 o, 상속된 ca x, 내부에서 x
   function setDataExternal(uint8 newData) external {
-    privateData = newData;
+    publicData = newData;
   }
 }

@@ -41,7 +41,7 @@ contract TransactionProperty {
       bytes4 selector = bytes4(keccak256(abi.encodePacked("newOderList2()")));
       bool check = false;
       if (selector == msg.sig) {
-          return true;
+          return false;
       } else if (msg.sig == 0x1b33b381) { // newCheckFunction() sig
           check = true;
       }

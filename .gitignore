@@ -234,4 +234,6 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/solidity,soliditytruffle,visualstudiocode,macos,windows
 
+# Remix
 artifacts
+.deps

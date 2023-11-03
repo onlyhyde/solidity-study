@@ -4,13 +4,14 @@ pragma solidity >=0.8.0 <0.9.0;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/security/Pausable.sol";
+import "@openzeppelin/contracts/utils/Pausable.sol";
 
 contract MyERC20 is ERC20, Ownable, ERC20Burnable, Pausable {
     uint8 private _decimals = 6;
-    // 1000000000 * 10 ** 18  
+    // 1000000000 * 10 ** 18
     // 1 ETH = 1 * 10 ** 18 (Wei)
-    constructor() ERC20("MyERC20Token", "METT") Ownable() {
+
+    constructor() ERC20("MyERC20Token", "METT") Ownable(_msgSender()) {
         _mint(msg.sender, 10000 * 10 ** decimals());
     }
 
@@ -28,12 +29,5 @@ contract MyERC20 is ERC20, Ownable, ERC20Burnable, Pausable {
 
     function unpause() public onlyOwner {
         _unpause();
-    }
-
-    function _beforeTokenTransfer(address from, address to, uint256 amount)
-        internal
-        whenNotPaused
-        override {
-        super._beforeTokenTransfer(from, to, amount);
     }
 }

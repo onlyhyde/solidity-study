@@ -238,3 +238,6 @@ $RECYCLE.BIN/
 artifacts
 .deps
 .deploys
+
+# Foundry
+cache

@@ -15,7 +15,7 @@
 // 언급해야 하는 등 라이선스와 관련된 다른 의무가 면제되는 것은 아닙니다.
 
 // SPDX 라이선스 식별자 사용 방법에 대한 자세한 내용은 SPDX 웹사이트에서 확인할 수 있습니다.
-// 참고 : https://spdx.org/licenses/ 
+// 참고 : https://spdx.org/licenses/
 
 pragma solidity ^0.8.17;
 /* pragma */
@@ -32,7 +32,7 @@ pragma solidity ^0.8.17;
 /* version */
 // pragma solidity ^0.8.17; // solidity version (고정)
 // pragma solidity >=0.8.0 <0.9.0; // solidity version (허용 구간)
-// 그외 range 
+// 그외 range
 // < Less than
 // <= Less than or equal to
 // > Greater than
@@ -42,22 +42,22 @@ pragma solidity ^0.8.17;
 // import "filename" as symbolName;
 // import {symbol} from "filename";
 // import * as symbolName from "filename";
-// -> symbolName.symbol 의 포맷으로 사용할 수 있습니다. 
-// import {symbol1 as alias, symbol2} from "filename"; 
-// -> symbol name에 충돌이 있는 경우, 다른 이름으로 alias하여 사용할 수 있습니다. 
+// -> symbolName.symbol 의 포맷으로 사용할 수 있습니다.
+// import {symbol1 as alias, symbol2} from "filename";
+// -> symbol name에 충돌이 있는 경우, 다른 이름으로 alias하여 사용할 수 있습니다.
 
 // import path
-// https://remix-ide.readthedocs.io/en/latest/import.html 
+// https://remix-ide.readthedocs.io/en/latest/import.html
 
 /* contract */
 // contract code 시작
 contract Ex1 {
-	// solidity 코드 적용
-	// A State를 함수를 통해 B State로 바꾸는 구조
-	// A -> Func() -> B
-	uint8 public a = 10; // a상태 
+    // solidity 코드 적용
+    // A State를 함수를 통해 B State로 바꾸는 구조
+    // A -> Func() -> B
+    uint8 public a = 10; // a상태
 
-	function changeDate() public {
-		a = 15; // 상태 변경
-	}
+    function changeDate() public {
+        a = 15; // 상태 변경
+    }
 }

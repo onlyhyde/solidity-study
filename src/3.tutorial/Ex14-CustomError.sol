@@ -6,15 +6,15 @@ pragma solidity ^0.8.17;
 
 // error ZeroCheckError();
 
-contract CustomError{
-  error ZeroCheckError(string data);
+contract CustomError {
+    error ZeroCheckError(string data);
 
-  mapping(address=>uint) private orderList;
+    mapping(address => uint256) private orderList;
 
-  function order() external payable {
-    if (msg.value == 0) {
-      revert ZeroCheckError("msg.value is lower than minPrice"); // error 발생, State 롤백
+    function order() external payable {
+        if (msg.value == 0) {
+            revert ZeroCheckError("msg.value is lower than minPrice"); // error 발생, State 롤백
+        }
+        orderList[msg.sender] = msg.value;
     }
-    orderList[msg.sender] = msg.value;
-  }
 }

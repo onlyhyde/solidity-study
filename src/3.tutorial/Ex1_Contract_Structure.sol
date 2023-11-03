@@ -49,6 +49,7 @@ pragma solidity ^0.8.17;
 // import path
 // https://remix-ide.readthedocs.io/en/latest/import.html 
 
+/* contract */
 // contract code 시작
 contract Ex1 {
 	// solidity 코드 적용

@@ -17,20 +17,28 @@
 // SPDX 라이선스 식별자 사용 방법에 대한 자세한 내용은 SPDX 웹사이트에서 확인할 수 있습니다.
 // 참고 : https://spdx.org/licenses/ 
 
-// pragma solidity >=0.8.0 <0.9.0; // solidity version (허용 구간)
-pragma solidity ^0.8.17; // solidity version (고정)
-
+pragma solidity ^0.8.17;
+/* pragma */
 // pragma 키워드는 특정 컴파일러 기능이나 검사를 활성화하는 데 사용됩니다.
 // 다른 파일을 가져오면 해당 파일의 프라그마가 가져오는 파일에 자동으로 적용되지 않습니다.
 
 // 버전 프라그마를 사용해도 컴파일러의 버전은 변경되지 않습니다.
 // 또한 컴파일러의 기능을 활성화하거나 비활성화하지도 않습니다.
-// 단지 컴파일러에 버전이 프라그마에서 요구하는 버전과 일치하는지 확인하도록 지시할 뿐. 
+// 단지 컴파일러에 버전이 프라그마에서 요구하는 버전과 일치하는지 확인하도록 지시할 뿐.
 // 일치하지 않으면 컴파일러는 오류를 발생시킵니다.
 
 // 이외에 ABI Coder Pragma 와 Experimental Pragma(ABIEncoderV2, SMTChecker)가 있습니다.
 
-// import 
+/* version */
+// pragma solidity ^0.8.17; // solidity version (고정)
+// pragma solidity >=0.8.0 <0.9.0; // solidity version (허용 구간)
+// 그외 range 
+// < Less than
+// <= Less than or equal to
+// > Greater than
+// >= Greater than or equal to
+
+/* import */
 // import "filename" as symbolName;
 // import {symbol} from "filename";
 // import * as symbolName from "filename";

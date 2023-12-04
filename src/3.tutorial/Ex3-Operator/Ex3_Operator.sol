@@ -5,6 +5,12 @@ contract Operation {
     uint256 public intData;
     string public stringData;
 
+    uint256 public constant test = 1;
+
+    function myFunc(uint a) public returns (uint) {
+        // 함수 로직
+    }
+
     function math() public {
         intData = intData + 1;
         intData += 1;

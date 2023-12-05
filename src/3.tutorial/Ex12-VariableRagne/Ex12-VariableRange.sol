@@ -10,8 +10,8 @@ contract VariableRange {
     }
 
     function getData2() public pure returns (uint256) {
-        uint256 localdata = 5;
-        return localdata; // 5
+        uint256 data = 5;
+        return data; // 5
     }
     // data의 name이 중복될 경우, memory의 data를 return 한다.
     // 따라서 view 대신 Pure를 사용하는 것과 같음.

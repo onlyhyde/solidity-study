@@ -51,7 +51,8 @@ contract Call {
 
     function callFunc(address payable _address, uint256 _a, uint256 _b) public returns (bytes memory) {
         // 외부 컨트랙트를 그냥 콜하는 것이 아닌, 함수호출에 대한 bytes를 생성하여 호출.
-        bytes memory callFuncBytes = abi.encodeWithSignature("add(uint256,uint256)", _a, _b); // uint가 아닌, uint256을 사용해야함. (uint==uint256)
+        // uint가 아닌, uint256을 사용해야함. (uint==uint256)
+        bytes memory callFuncBytes = abi.encodeWithSignature("add(uint256,uint256)", _a, _b);
         if (isContract(_address) == true) {
             (bool result, bytes memory returnData) = _address.call(callFuncBytes);
             if (result == true) {
@@ -66,7 +67,8 @@ contract Call {
 
     function callNotFunc(address payable _address, uint256 _a, uint256 _b) public returns (bytes memory) {
         // 외부 컨트랙트를 그냥 콜하는 것이 아닌, 함수호출에 대한 bytes를 생성하여 호출.
-        bytes memory callFuncBytes = abi.encodeWithSignature("NotExistFunc(uint256,uint256)", _a, _b); // uint가 아닌, uint256을 사용해야함. (uint==uint256)
+        // uint가 아닌, uint256을 사용해야함. (uint==uint256)
+        bytes memory callFuncBytes = abi.encodeWithSignature("NotExistFunc(uint256,uint256)", _a, _b);
         if (isContract(_address) == true) {
             (bool result, bytes memory returnData) = _address.call(callFuncBytes);
             if (result == true) {

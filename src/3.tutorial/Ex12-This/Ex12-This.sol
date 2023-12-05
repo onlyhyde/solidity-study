@@ -4,7 +4,9 @@ pragma solidity ^0.8.17;
 contract This {
     // This는 Contract를 지칭한다.
     function getBalance() public view returns (uint256) {
-        return address(this).balance; // contract를 address형으로 캐스팅 후, balance를 읽어 Contract의 잔액을 읽수 있음.
+        // contract를 address형으로 캐스팅 후,
+        // balance를 읽어 Contract의 잔액을 읽수 있음.
+        return address(this).balance;
     }
 
     function setBalance() public payable {
